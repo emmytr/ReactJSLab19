@@ -1,0 +1,49 @@
+/* navBar.module.css */
+.navbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 0px;
+	transition: background-color 0.3s ease;
+	z-index: 1000;
+}
+
+.transparent {
+	background-color: transparent;
+}
+
+.black {
+	background-color: black;
+}
+
+.navbar-left {
+	flex: 1;
+
+}
+
+.navbar-right {
+	flex: 1;
+	text-align: right;
+	padding-right: 50px;
+}
+
+.navbar-brand {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: rgb(187, 12, 12);
+	text-decoration: none;
+}
+
+
+.search-icon {
+	cursor: pointer;
+}
+
+.search-icon svg {
+	width: 20px;
+	height: 20px;
+	fill: rgb(118, 86, 86);
+}

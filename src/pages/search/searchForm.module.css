@@ -1,0 +1,84 @@
+.searchForm {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+}
+
+
+
+.form {
+    margin: 0 auto;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 50%;
+
+}
+
+.inputContent {
+    /* Blue line separates input and buttons */
+    border-bottom: 2px solid #93d4dd;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    /* Stack elements vertically */
+    justify-content: center;
+    /* Vertically center the content */
+}
+
+input {
+    /* position: absolute; */
+    width: auto;
+    background: transparent;
+    padding: 10px 40px 10px 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+
+
+
+.searchIcon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-225%);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+button {
+    margin-left: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    background-color: aliceblue;
+    color: rgb(12, 12, 12);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttonGroup {
+    width: auto;
+    height: 70px;
+    display: flex;
+    /* Use Flexbox for layout */
+    justify-content: flex-end;
+    /* Align items to the right horizontally */
+    align-items: center;
+    padding-right: 10px
+}
+
+
+button:hover {
+    background-color: #93d4dd;
+    color: aliceblue;
+    cursor: pointer
+}
+
+button:focus {
+    outline: none;
+}

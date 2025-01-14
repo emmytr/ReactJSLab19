@@ -1,0 +1,78 @@
+/* Base container for movie lists, horizontal scroll enabled */
+.group {
+    color: rgb(247, 241, 234)
+}
+
+.movieContainer {
+    display: flex;
+    overflow-x: auto;
+    /* Enable horizontal scroll */
+    overflow-y: hidden;
+    /* Hide vertical scroll */
+    padding: 10px;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    /* Smooth snapping while scrolling */
+    padding-bottom: 20px;
+    /* Add some padding to prevent overlap with the scrollbar */
+}
+
+.movieItem {
+    flex: 0 0 auto;
+    /* Prevent items from shrinking */
+    width: 200px;
+    /* Define a consistent width */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    scroll-snap-align: start;
+    /* Ensure each item snaps at the start of the container */
+}
+
+/* Scaling effect on hover */
+.movieItem:hover {
+    transform: scale(1.05);
+}
+
+/* Common styles for all movie images */
+.movieImage {
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Netflix Originals: use poster images */
+.netflixOriginals img {
+    height: 300px;
+    /* Taller height for posters */
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Other genres: use backdrop images */
+.otherGenres img {
+    height: 100px;
+    /* Wider and shorter for backdrops */
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Horizontal scrollbar visible */
+.movieContainer::-webkit-scrollbar {
+    height: 8px;
+    /* Make scrollbar a bit larger */
+}
+
+.movieContainer::-webkit-scrollbar-thumb {
+    background-color: rgba(51, 49, 49, 0.5);
+    /* Darker thumb for the scrollbar */
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.movieContainer::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1);
+    /* Light background for scrollbar track */
+}
